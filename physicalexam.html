@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>BMC Autism App: Physical Exam</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body id="body" background="">
+        
+        <p id="step"></p>
+        <img src="" id="pic">
+        
+        <script>
+            var urlParams=new URLSearchParams(window.location.search);
+            var i = Number.parseInt(urlParams.get("pos"));
+        
+            var str="physicalexam.html?";
+            var str1="";
+            
+            switch (i) 
+            {  
+                case 0:
+                    document.getElementById("step").innerHTML="This story is about getting a physical exam. I can tell the doctor anytime if I need a break. The doctor needs to do her job so I can stay healthy.";
+                    document.getElementById("pic").src= "img/physicalexam/1.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 1:
+                    document.getElementById("step").innerHTML="I may have to take off some of my clothes and put on a paper dress.";
+                    document.getElementById("pic").src= "img/physicalexam/2.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 3:
+                    document.getElementById("step").innerHTML="The doctor will feel different parts of my body to make sure everything is okay.";
+                    document.getElementById("pic").src= "img/physicalexam/3.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 5:
+                    document.getElementById("step").innerHTML="The doctor may check my eyes, ears, and throat.";
+                    document.getElementById("pic").src= "img/physicalexam/4.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                
+                case 7:
+                    document.getElementById("step").innerHTML="The doctor may listen to my heart and ask me to take deep breaths.";
+                    document.getElementById("pic").src= "img/physicalexam/5.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 9:
+                    document.getElementById("step").innerHTML="The doctor might tap softly on my elbow, knee, or ankle.";
+                    document.getElementById("pic").src= "img/physicalexam/6.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 11:
+                    document.getElementById("step").innerHTML="After the doctor finishes checking me, I can put my clothes back on.";
+                    document.getElementById("pic").src= "img/physicalexam/7.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                   
+                case 12:
+                    document.getElementById("step").innerHTML="I did a great job getting my physical exam!";
+                    document.getElementById("body").background= "img/star1.gif";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                default:
+                    document.getElementById("step").innerHTML="I completed this step!";
+                    document.getElementById("body").background="img/star2.gif";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+            }
+            
+            if(i>=13){
+                str="medicalprocedures.html";
+            } 
+            
+        
+        </script>
+        
+        <br/>
+        <button class="button3" onclick="window.location.assign('options1.html?'+str1+'&story=physicalexam')">Options</button>
+        <button class="button1" onclick="previous1(i-1,'physicalexam.html?')">Back</button>
+        <button class="button1" onclick="window.location.assign(str);">Next</button>
+         
+        
+        <script src="js/index.js" type="text/javascript"></script>
+    </body>
+</html>

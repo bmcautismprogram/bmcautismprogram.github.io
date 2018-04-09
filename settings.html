@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en-US">
+    <head>
+        <title>BMC Autism App: Story Settings</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    
+    <body>
+        <h2>Story Settings</h2>
+        
+        <p>
+            Starting point:
+            <select name="start" id="start">
+                <option value=""></option>
+                <option value="parkinggarage">Parking garage</option>
+                <option value="busstop">Bus stop</option>
+                <option value="sidewalk">Sidewalk outside BMC main gate</option>
+            </select><br>
+        </p>
+        
+        <p>    
+            Building:
+            <select name="building" id="building" onchange="configureDropDownLists(this,document.getElementById('department'))">
+                <option value=""></option>
+                <option value="doctorsoffice">Doctors Office</option>
+                <option value="dowling">Dowling</option>
+                <option value="preston">Preston</option>
+                <option value="shapiro">Shapiro</option>
+                <option value="yawkey">Yawkey</option>
+                
+            </select><br>
+        </p>
+        
+        <p>
+            Department:
+            <select id="department" name="department">
+            </select>   
+        </p>
+            <button class="button1" onclick="map()">BMC map</button>
+            <button class="button1" onclick="mainmenu()">Main menu</button>
+            <button class="button1" onclick="begin()">Begin Story</button>
+           
+        <table id ="t01">
+            <tr>
+                <th>Department</th>
+                <th>Building</th> 
+            </tr>
+            <tr>
+                <td>Adolescent, Family, & Pediatric Medicine</td>
+                <td>Yawkey</td> 
+            </tr>
+            <tr>
+                <td>Adult Primary Care</td>
+                <td>Shapiro</td> 
+            </tr>
+            <tr>
+                <td>Behavioral Health</td>
+                <td>Dowling</td> 
+            </tr>
+            <tr>
+                <td>Blood Draw Station</td>
+                <td>Preston, Shapiro, Yawkey</td> 
+            </tr>
+            <tr>
+                <td>Cardiovascular</td>
+                <td>Preston</td> 
+            </tr>
+            <tr>
+                <td>Dentistry</td>
+                <td>Yawkey</td> 
+            </tr>
+            <tr>
+                <td>Endocrinology, Diabetes, & Nutrition</td>
+                <td>Preston</td> 
+            </tr>
+            <tr>
+                <td>Neurology</td>
+                <td>Shapiro</td> 
+            </tr>
+            <tr>
+                <td>Ophthalmology</td>
+                <td>Yawkey</td> 
+            </tr>
+            <tr>
+                <td>Pediatric Specialty</td>
+                <td>Yawkey</td> 
+            </tr>
+            <tr>
+                <td>Psychiatry</td>
+                <td>Doctors Office</td> 
+            </tr>
+            
+            <tr>
+                <td>Renal Medicine</td>
+                <td>Preston</td> 
+            </tr>
+            <tr>
+                <td>TB Clinic</td>
+                <td>Preston</td> 
+            </tr>
+        </table>
+        
+            
+        <script src="js/index.js" type="text/javascript"></script>
+           
+        
+    </body>
+</html>
+

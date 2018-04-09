@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>BMC Autism App: Measuring Blood Pressure</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body id="body" background="">
+        
+        <p id="step"></p>
+        <img src="" id="pic">
+        
+        <script>
+            var urlParams=new URLSearchParams(window.location.search);
+            var i = Number.parseInt(urlParams.get("pos"));
+        
+            var str="bloodpressure.html?";
+            var str1="";
+            
+            switch (i) 
+            {  
+                case 0:
+                    document.getElementById("step").innerHTML="This story is about how the nurse will measure my blood pressure. I can tell the nurse anytime if I need a break. The nurse needs to do her job so I can stay healthy.";
+                    document.getElementById("pic").src= "img/bloodpressure/1.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 1:
+                    document.getElementById("step").innerHTML="I will sit down. The nurse will wrap a cloth around my arm. It might feel tight.";
+                    document.getElementById("pic").src= "img/bloodpressure/2.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 3:
+                    document.getElementById("step").innerHTML="The cloth will get tighter, but that's okay. It is important that I sit still.";
+                    document.getElementById("pic").src= "img/bloodpressure/3.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 5:
+                    document.getElementById("step").innerHTML="The cloth will stop feeling tight. The nurse will read my blood pressure from the machine.";
+                    document.getElementById("pic").src= "img/bloodpressure/4.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 7:
+                    document.getElementById("step").innerHTML="The nurse will remove the cloth. I can ask the nurse to tell me my blood pressure.";
+                    document.getElementById("pic").src= "img/bloodpressure/5.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                   
+                case 8:
+                    document.getElementById("step").innerHTML="I did a great job getting my blood pressure measured!";
+                    document.getElementById("body").background= "img/star1.gif";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                default:
+                    document.getElementById("step").innerHTML="I completed this step!";
+                    document.getElementById("body").background="img/star2.gif";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+            }
+            
+            if(i>=9){
+                str="medicalprocedures.html";
+            } 
+            
+        
+        </script>
+        
+        <br/>
+        <button class="button3" onclick="window.location.assign('options1.html?'+str1+'&story=bloodpressure')">Options</button>
+        <button class="button1" onclick="previous1(i-1,'bloodpressure.html?')">Back</button>
+        <button class="button1" onclick="window.location.assign(str);">Next</button>
+         
+        
+        <script src="js/index.js" type="text/javascript"></script>
+    </body>
+</html>

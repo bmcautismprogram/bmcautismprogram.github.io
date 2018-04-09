@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>BMC Autism App: Measuring Weight</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <script>
+            var urlParams=new URLSearchParams(window.location.search);
+            var i = Number.parseInt(urlParams.get("pos"));
+        
+            var str="weight.html?";
+            var str1="";
+            
+            switch (i) 
+            {  
+                case 0:
+                    document.write("This story is about how the nurse will measure my weight.");
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 1:
+                    document.write("The nurse may ask me to take off my shoes. I will then step onto the scale.");
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 3:
+                    document.write("I will stand still while the nurse measures my weight.");
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 5:
+                    document.write("I will step off the scale.");
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                   
+                case 6:
+                    document.write("I completed this story about measuring my weight!");
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                default:
+                    document.write("I completed this step!");
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+            }
+            
+            if(i>=7){
+                str="medicalprocedures.html";
+            } 
+            
+        
+        </script>
+        
+        <br/>
+        <button class="button1" onclick="window.location.assign('options1.html?'+str1+'&story=weight')">Options</button>
+        <button class="button1" onclick="window.location.assign(str);">Next</button>
+         
+        
+        <script src="main.js" type="text/javascript"></script>
+    </body>
+</html>

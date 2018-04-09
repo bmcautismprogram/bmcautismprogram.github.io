@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>BMC Autism App: Measuring Height and Weight</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body id="body" background="">
+        
+        <p id="step"></p>
+        <img src="" id="pic">
+        
+        <script>
+            var urlParams=new URLSearchParams(window.location.search);
+            var i = Number.parseInt(urlParams.get("pos"));
+        
+            var str="heightandweight.html?";
+            var str1="";
+            
+            switch (i) 
+            {  
+                case 0:
+                    document.getElementById("step").innerHTML="This story is about how the nurse will measure my height and weight. I can tell the nurse anytime if I need a break. The nurse needs to do her job so I can stay healthy.";
+                    document.getElementById("pic").src= "img/heightandweight/1.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 1:
+                    document.getElementById("step").innerHTML="I will step onto the scale and lean my back against the height rod.";
+                    document.getElementById("pic").src= "img/heightandweight/2.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 3:
+                    document.getElementById("step").innerHTML="I will stand tall and still while the nurse weighs me.";
+                    document.getElementById("pic").src= "img/heightandweight/3.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                case 5:
+                    document.getElementById("step").innerHTML="I will continue to stand tall and still while the nurse measures my height.";
+                    document.getElementById("pic").src= "img/heightandweight/4.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                
+                case 7:
+                    document.getElementById("step").innerHTML="I will step off the scale. I can ask the nurse to tell me my height and weight.";
+                    document.getElementById("pic").src= "img/heightandweight/5.jpg";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                   
+                case 8:
+                    document.getElementById("step").innerHTML="I did a great job getting my height and weight measured!";
+                    document.getElementById("body").background= "img/star1.gif";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+                    
+                default:
+                    document.getElementById("step").innerHTML="I completed this step!";
+                    document.getElementById("body").background="img/star2.gif";
+                    i = i + 1;
+                    str = str + "pos=" + i;
+                    str1 = str1 + "pos=" + i;
+                    break;
+            }
+            
+            if(i>=9){
+                str="medicalprocedures.html";
+            } 
+            
+        
+        </script>
+        
+        <br/>
+        <button class="button3" onclick="window.location.assign('options1.html?'+str1+'&story=heightandweight')">Options</button>
+        <button class="button1" onclick="previous1(i-1,'heightandweight.html?')">Back</button>
+        <button class="button1" onclick="window.location.assign(str);">Next</button>
+         
+        
+        <script src="js/index.js" type="text/javascript"></script>
+    </body>
+</html>

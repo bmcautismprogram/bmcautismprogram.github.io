@@ -6,10 +6,10 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>BMC Autism App: Story Options</title>
+        <title>BMC Autism App: Home</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <!-- jQuery -->
+        <!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- Bootstrap 3 -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -18,23 +18,17 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
     <body>
-    <div class="container" style="text-align:center">
-        <script>
-            var urlParams=new URLSearchParams(window.location.search);
-            var i = Number.parseInt(urlParams.get("pos"))-1;
-        </script>
-        
-        <h2>Options</h2>
-        <button class="button2" onclick="resume(i,urlParams.get('start'),urlParams.get('building'),urlParams.get('department'))">Resume story</button><br>
-        <button class="button2" onclick="restart(urlParams.get('start'),urlParams.get('building'),urlParams.get('department'))">Restart story</button><br>
-        <button class="button2" onclick="settings()">Change story settings</button><br>
-        <button class="button2" onclick="mainmenu()">Main menu</button>
-      
-      </div><!-- END .container -->
+    <div class="container">
+        <h1>Title</h1>
+        <div class="row">
+        	<div class="col-md-12">
+            	<p>Text</p>
+            </div>
+        </div>
+	</div><!-- END .container -->
 	<div class="container footer">
 		<img src="img/logo_white.png" alt="BMC logo" class="img-responsive">
-    </div>  
-        
-     <script src="js/index.js" type="text/javascript"></script>   
+    </div>
+	<script src="js/index.js" type="text/javascript"></script>
     </body>
 </html>

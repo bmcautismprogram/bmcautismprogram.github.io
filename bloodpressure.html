@@ -16,10 +16,13 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="css/index.css">
+		<!--Font Awesome-->
+		<script src="https://use.fontawesome.com/808b665924.js"></script> <!--DanielChao-->
     </head>  
     <body id="body" background="">
-          <div class="container" style="text-align:center">
-        <p id="step"></p>
+    <div class="container" style="text-align:center">
+	    <p id="star"></p> <!--DanielChao-->
+        <p id="step" style = "font-size: 20px"></p> <!--DanielChao-->
         <img class="img-responsive" src="" id="pic">
         
         <script>
@@ -81,7 +84,7 @@ and open the template in the editor.
                     
                 default:
                     document.getElementById("step").innerHTML="I completed this step!";
-                    document.getElementById("body").background="img/star2.gif";
+					document.getElementById("star").innerHTML="<i class=\"fa fa-star fa-spin fa-5x fa-fw\"></i>"; <!--DanielChao-->
                     i = i + 1;
                     str = str + "pos=" + i;
                     str1 = str1 + "pos=" + i;

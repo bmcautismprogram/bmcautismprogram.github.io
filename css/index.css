@@ -158,12 +158,12 @@ select{
 
 span{
     color: rgb(85, 50, 120);
-    font-weight: bold;
+    font-weight:1000;
 }
 
 a{
-    color:rgb(85,50,120);
-	font-weight:bold;
+    color:rgb(85, 50, 120);
+	font-weight:1000;
 }
 .container{
 	background: #fff;

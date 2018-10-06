@@ -6,140 +6,38 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>BMC Autism App: Dentist Appointment</title>
+        <title>BMC Autism App: About the app</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <!-- jQuery -->
+        <!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- Bootstrap 3 -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="css/index.css">
-		<!--Font Awesome-->
-		<script src="https://use.fontawesome.com/808b665924.js"></script> <!--DanielChao-->
     </head>
-    
-    <body id="body" background="">
-       <div class="container" style="text-align:center"> 
-	    <p id="star"></p> <!--DanielChao-->
-        <p id="step" style = "font-size: 20px"></p> <!--DanielChao-->
-        <img class="img-responsive" src="" id="pic">
-        
-        <script>
-            var urlParams=new URLSearchParams(window.location.search);
-            var i = Number.parseInt(urlParams.get("pos"));
-        
-            var str="dentist.html?";
-            var str1="";
-            
-            switch (i) 
-            {  
-                case 0:
-                    document.getElementById("step").innerHTML="This story is about going to a dentist's appointment. The dentist needs to help keep my teeth healthy and strong.";
-                    document.getElementById("pic").src= "img/dentist/1.jpg";
-                    i = i + 1;
-                    str = str + "pos=" + i;
-                    str1 = str1 + "pos=" + i;
-                    break;
-                    
-                case 1:
-                    document.getElementById("step").innerHTML="I will sit in a big chair that lays back.";
-                    document.getElementById("pic").src= "img/dentist/2.jpg";
-                    i = i + 1;
-                    str = str + "pos=" + i;
-                    str1 = str1 + "pos=" + i;
-                    break;
-                    
-                case 3:
-                    document.getElementById("step").innerHTML="The dentist will put a special bib on me to keep me clean.";
-                    document.getElementById("pic").src= "img/dentist/3.jpg";
-                    i = i + 1;
-                    str = str + "pos=" + i;
-                    str1 = str1 + "pos=" + i;
-                    break;
-                    
-                case 5:
-                    document.getElementById("step").innerHTML="The dentist will turn on a special light to see inside my mouth. It might be bright.";
-                    document.getElementById("pic").src= "img/dentist/4.jpg";
-                    i = i + 1;
-                    str = str + "pos=" + i;
-                    str1 = str1 + "pos=" + i;
-                    break;
-                    
-                case 7:
-                    document.getElementById("step").innerHTML="I will need to keep my mouth open so the dentist can look in my mouth.";
-                    document.getElementById("pic").src= "img/dentist/5.jpg";
-                    i = i + 1;
-                    str = str + "pos=" + i;
-                    str1 = str1 + "pos=" + i;
-                    break;
-                    
-                case 9:
-                    document.getElementById("step").innerHTML="The dentist will use different tools to make sure my teeth are healthy.";
-                    document.getElementById("pic").src= "img/dentist/6.jpg";
-                    i = i + 1;
-                    str = str + "pos=" + i;
-                    str1 = str1 + "pos=" + i;
-                    break;
-                
-                case 11:
-                    document.getElementById("step").innerHTML="The dentist might clean my teeth.  The toothbrush at the dentist is different than mine. It might make a noise. I might have to rinse my mouth with water.";
-                    document.getElementById("pic").src= "img/dentist/7.jpg";
-                    i = i + 1;
-                    str = str + "pos=" + i;
-                    str1 = str1 + "pos=" + i;
-                    break;
-                    
-                case 13:
-                    document.getElementById("step").innerHTML="The dentist might take pictures of my teeth.";
-                    document.getElementById("pic").src= "img/dentist/8.jpg";
-                    i = i + 1;
-                    str = str + "pos=" + i;
-                    str1 = str1 + "pos=" + i;
-                    break;
-                    
-                case 15:
-                    document.getElementById("step").innerHTML="When I finish my exam, I will get a small prize.";
-                    document.getElementById("pic").src= "img/dentist/9.jpg";
-                    i = i + 1;
-                    str = str + "pos=" + i;
-                    str1 = str1 + "pos=" + i;
-                    break;
-                   
-                case 16:
-                    document.getElementById("step").innerHTML="I did a great job going to my dentist's appointment!";
-                    document.getElementById("body").background= "img/star1.gif";
-                    i = i + 1;
-                    str = str + "pos=" + i;
-                    str1 = str1 + "pos=" + i;
-                    break;
-                    
-                default:
-                    document.getElementById("step").innerHTML="I completed this step!";
-					document.getElementById("star").innerHTML="<i class=\"fa fa-star fa-spin fa-5x fa-fw\"></i>"; <!--DanielChao-->
-                    i = i + 1;
-                    str = str + "pos=" + i;
-                    str1 = str1 + "pos=" + i;
-                    break;
-            }
-            
-            if(i>=17){
-                str="medicalprocedures.html";
-            } 
-            
-        
-        </script>
-        
-        <br/>
-        <button class="button3" onclick="window.location.assign('options1.html?'+str1+'&story=dentist')">Options</button>
-        <button class="button1" onclick="previous1(i-1,'dentist.html?')">Back</button>
-        <button class="button1" onclick="window.location.assign(str);">Next</button>
-         </div><!-- END .container -->
+    <body>
+    <div class="container">
+        <h1>About the App</h1>
+        <p>This app provides a collection of social stories about going to the doctor to help people with Autism Spectrum Disorder (ASD) prepare for their doctor's appointments.</p>
+	<br><p><em>Social stories</em> detail each step of a situation in order help ease anxiety and set expectations about what will happen.<p>
+      <br><p>The social stories in this app are about:</p>
+	<ul><li>Getting to the doctor's office on the campus of Boston Medical Center (BMC)</li>
+            <li>Common medical procedures:
+		<ul><li>Measuring height and weight</li>
+		    <li>Measuring blood pressure</li>
+		    <li>Getting a shot</li>
+		    <li>Getting blood drawn</li>
+		    <li>Physical exam</li>
+		    <li>Dentist appointment</li></ul></li>
+        </ul>
+      <br><p>For questions or comments, please email <a href="mailto:autismprogram@bmc.org?Subject=App%20User%20Comment">autismprogram@bmc.org</a>.</p>
+      <button class="button1" onclick="mainmenu()">Main Menu</button>
+	</div><!-- END .container -->
 	<div class="container footer">
-		<img src="img/logo_white.png" alt="BMC logo" class="img-responsive">
-    </div>
-        
-        <script src="js/index.js" type="text/javascript"></script>
-    </body>
+		<a href="https://www.bmc.org/" target="_new"><img src="img/logo_white.png" alt="BMC logo" class="img-responsive"></a>
+    </div>        
+<script src="js/index.js" type="text/javascript"></script>
+</body>
 </html>

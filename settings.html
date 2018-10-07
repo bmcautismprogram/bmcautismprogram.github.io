@@ -17,7 +17,7 @@ and open the template in the editor.
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
-    <body>
+    <body onload = "configureDropDownLists(building,document.getElementById('department'))">
     <div class="container" style="text-align:center">
     
         <h2>Story Settings</h2>
@@ -25,7 +25,6 @@ and open the template in the editor.
         <p>
             Starting point:
             <select name="start" id="start">
-                <option value=""></option>
                 <option value="parkinggarage">Parking garage</option>
                 <option value="busstop">Bus stop</option>
                 <option value="sidewalk">Sidewalk outside BMC main gate</option>
@@ -35,7 +34,6 @@ and open the template in the editor.
         <p>    
             Building:
             <select name="building" id="building" onchange="configureDropDownLists(this,document.getElementById('department'))">
-                <option value=""></option>
                 <option value="doctorsoffice">Doctors Office</option>
                 <option value="dowling">Dowling</option>
                 <option value="preston">Preston</option>
@@ -45,6 +43,7 @@ and open the template in the editor.
             </select><br>
         </p>
         
+		
         <p>
             Department:
             <select id="department" name="department">

@@ -119,6 +119,7 @@ function heightandweight(){
 function configureDropDownLists(building,department) {
     var doctorsoffice = ['Psychiatry Research Center'];
     var dowling = ['Behavioral Health', 'Child Psychiatry'];
+    var familymedicine = ['Family Medicine'];
     var preston = ['Blood Draw Station','Cardiovascular Center', 'Center for Endocrinology, Diabetes, Nutrition & Weight Management', 'Occupational Therapy/Physical Therapy', 'Renal Medicine', 'TB Clinic'];
     var shapiro = ['Adult Primary Care', 'Blood Collection Station', 'Dermatology', 'Neurology', 'Pediatric Neurology'];
     var yawkey = ['Adolescent Medicine', 'Blood Draw Station', 'Dentistry', 'Family Medicine', 'Ophthalmology', 'Pediatric Primary Care', 'Pediatric Dentistry', 'Pediatric Specialty'];
@@ -135,6 +136,13 @@ function configureDropDownLists(building,department) {
             department.options.length = 0;
             for (i = 0; i < dowling.length; i++) {
             	createOption(department, dowling[i], "d"+i);
+            }
+            break;
+
+        case "familymedicine":
+            department.options.length = 0;
+            for (i = 0; i < familymedicine.length; i++) {
+                createOption(department, familymedicine[i], "f"+i);
             }
             break;
             

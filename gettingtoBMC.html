@@ -104,6 +104,10 @@ and open the template in the editor.
                         document.getElementById("step").innerHTML="I will walk to the Shapiro building.";
                         document.getElementById("pic").src= "img/gettingtoBMC/shapiro/outside.jpg";
                     }
+                    if (urlParams.get("building")==="familymedicine"){
+                        document.getElementById("step").innerHTML="I will walk to the Family Medicine building.";
+                        document.getElementById("pic").src= "img/gettingtoBMC/familymedicine/outside.jpg";
+                    }
                     if (urlParams.get("building")==="preston"){
                         document.getElementById("step").innerHTML="I will walk to the Preston building.";
                         document.getElementById("pic").src= "img/gettingtoBMC/preston/outside.jpg";
@@ -128,10 +132,15 @@ and open the template in the editor.
                         document.getElementById("pic").src= "img/gettingtoBMC/"+urlParams.get("building")+"/"+urlParams.get("department")+"/1.jpg";
                         i = i+5;
                     }
-                    else if (urlParams.get("department")==="p3"){
+                    if (urlParams.get("department")==="p3"){
                         document.getElementById("step").innerHTML="I will go inside and walk to the Occupational Therapy/Physical Therapy office.";
                         document.getElementById("pic").src= "img/gettingtoBMC/"+urlParams.get("building")+"/"+urlParams.get("department")+"/1.jpg";
                         i = i+5;
+                    }
+                    if (urlParams.get("department")==="f0"){
+                        document.getElementById("step").innerHTML="I will go inside and walk to the front desk. Then, I will tell the person my name and that I am here to see my "+person+".";
+                        document.getElementById("pic").src= "img/gettingtoBMC/"+urlParams.get("building")+"/"+urlParams.get("department")+"/frontdesk.jpg";
+                        i = i+7;
                     }
                     else{
                         document.getElementById("step").innerHTML="I will go inside and walk to the elevator.";
@@ -149,7 +158,7 @@ and open the template in the editor.
                     break;
                     
                 case 9:
-                    var dict = {do0:"Psychiatry Research Center", d0:"Behavioral Health department", d1:"Child Psychiatry department", p0:"Blood Draw Station", p1:"Cardiovascular Center", p2:"Center for Endocrinology, Diabetes, Nutrition & Weight Management", p3:"Occupational Therapy/Physical Therapy department", p4:"Renal Medicine department", p5:"TB Clinic", s0:"Adult Primary Care department", s1:"Blood Collection Station", s2:"Dermatology", s3:"Neurology department", s4:"Pediatric Neurology department", y0:"Adolescent Medicine department", y1:"Blood Draw Station", y2:"Dentistry department", y3:"Family Medicine department", y4:"Ophthalmology department", y5:"Pediatric Primary Care department", y6:"Pediatric Dentistry department", y7:"Pediatric Specialty department"};
+                    var dict = {do0:"Psychiatry Research Center", d0:"Behavioral Health department", d1:"Child Psychiatry department", f0:"Family Medicine department", p0:"Blood Draw Station", p1:"Cardiovascular Center", p2:"Center for Endocrinology, Diabetes, Nutrition & Weight Management", p3:"Occupational Therapy/Physical Therapy department", p4:"Renal Medicine department", p5:"TB Clinic", s0:"Adult Primary Care department", s1:"Blood Collection Station", s2:"Dermatology", s3:"Neurology department", s4:"Pediatric Neurology department", y0:"Adolescent Medicine department", y1:"Blood Draw Station", y2:"Dentistry department", y3:"Family Medicine department", y4:"Ophthalmology department", y5:"Pediatric Primary Care department", y6:"Pediatric Dentistry department", y7:"Pediatric Specialty department"};
                     document.getElementById("step").innerHTML="I will take the elevator to the floor that the "+dict[urlParams.get("department")]+" is on.";
                     if ((urlParams.get("start")==="parkinggarage") && urlParams.get("building")==="doctorsoffice"){
                         document.getElementById("pic").src="img/gettingtoBMC/doctorsoffice/elevator2.jpg";

@@ -133,8 +133,8 @@ function configureDropDownLists(building,department) {
             
         case "dowling":
             department.options.length = 0;
-        for (i = 0; i < dowling.length; i++) {
-            createOption(department, dowling[i], "d"+i);
+            for (i = 0; i < dowling.length; i++) {
+            	createOption(department, dowling[i], "d"+i);
             }
             break;
             

@@ -137,7 +137,7 @@ and open the template in the editor.
                         i = i+5;
                     }
                     else if (urlParams.get("department")==="p3"){
-                        document.getElementById("step").innerHTML="I will go inside and walk to the Occupational Therapy/Physical Therapy office.";
+                        document.getElementById("step").innerHTML="I will go inside and walk to the Physical/Occupational Therapy office.";
                         document.getElementById("pic").src= "img/gettingtoBMC/"+urlParams.get("building")+"/"+urlParams.get("department")+"/1.jpg";
                         i = i+5;
                     }
@@ -177,7 +177,7 @@ and open the template in the editor.
                     break;
                     
                 case 9:
-                    var dict = {do0:"Psychiatry Research Center", d0:"Behavioral Health department", d1:"Child Psychiatry department", f0:"Family Medicine department", p0:"Blood Draw Station", p1:"Cardiovascular Center", p2:"Center for Endocrinology, Diabetes, Nutrition & Weight Management", p3:"Occupational Therapy/Physical Therapy department", p4:"Renal Medicine department", p5:"TB Clinic", s0:"Adult Primary Care department", s1:"Blood Collection Station", s2:"Dermatology", s3:"Neurology department", s4:"Pediatric Neurology department", y0:"Adolescent Medicine department", y1:"Blood Draw Station", y2:"Dentistry department", y3:"Family Medicine department", y4:"Ophthalmology department", y5:"Pediatric Primary Care department", y6:"Pediatric Dentistry department", y7:"Pediatric Specialty department", m0:"Radiology department", mo0:"Audiology department", mo1:"Blood Draw Station", mo2:"Hematology department", mo3:"Gastroenterology department", mo4:"Oncology department", mo5:"Otolaryngology department"};
+                    var dict = {do0:"Psychiatry Research Center", d0:"Behavioral Health department", d1:"Child Psychiatry department", f0:"Family Medicine department", p0:"Blood Draw Station", p1:"Cardiovascular Center", p2:"Center for Endocrinology, Diabetes, Nutrition & Weight Management", p3:"Physical/Occupational Therapy department", p4:"Renal Medicine department", p5:"TB Clinic", s0:"Adult Primary Care department", s1:"Blood Collection Station", s2:"Dermatology", s3:"Neurology department", s4:"Pediatric Neurology department", y0:"Adolescent Medicine department", y1:"Blood Draw Station", y2:"Dentistry department", y3:"Family Medicine department", y4:"Ophthalmology department", y5:"Pediatric Primary Care department", y6:"Pediatric Dentistry department", y7:"Pediatric Specialty department", m0:"Radiology department", mo0:"Audiology department", mo1:"Blood Draw Station", mo2:"Hematology department", mo3:"Gastroenterology department", mo4:"Oncology department", mo5:"Otolaryngology department"};
                     document.getElementById("step").innerHTML="I will take the elevator to the floor that the "+dict[urlParams.get("department")]+" is on.";
                     if ((urlParams.get("start")==="parkinggarage") && urlParams.get("building")==="doctorsoffice"){
                         document.getElementById("pic").src="img/gettingtoBMC/doctorsoffice/elevator2.jpg";

@@ -121,6 +121,7 @@ function configureDropDownLists(building,department) {
     var dowling = ['Behavioral Health', 'Child Psychiatry'];
     var familymedicine = ['Family Medicine'];
     var menino = ['Radiology'];
+    var moakley = ['Audiology', 'Blood Draw Station', 'Hematology', 'Gastroenterology', 'Oncology', 'Otolaryngology'];
     var preston = ['Blood Draw Station','Cardiovascular Center', 'Center for Endocrinology, Diabetes, Nutrition & Weight Management', 'Occupational Therapy/Physical Therapy', 'Renal Medicine', 'TB Clinic'];
     var shapiro = ['Adult Primary Care', 'Blood Collection Station', 'Dermatology', 'Neurology', 'Pediatric Neurology'];
     var yawkey = ['Adolescent Medicine', 'Blood Draw Station', 'Dentistry', 'Family Medicine', 'Ophthalmology', 'Pediatric Primary Care', 'Pediatric Dentistry', 'Pediatric Specialty'];
@@ -151,6 +152,13 @@ function configureDropDownLists(building,department) {
             department.options.length = 0;
             for (i = 0; i < menino.length; i++) {
                 createOption(department, menino[i], "m"+i);
+            }
+            break;
+
+        case "moakley":
+            department.options.length = 0;
+            for (i = 0; i < moakley.length; i++) {
+                createOption(department, moakley[i], "mo"+i);
             }
             break;
             

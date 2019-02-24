@@ -188,5 +188,6 @@ a{
 ul {
 	list-style-type: disc;
 	list-style-position: inside;
-	text-align: left;
+    	text-align: left;
+    	font-size: 16px; 
 }
